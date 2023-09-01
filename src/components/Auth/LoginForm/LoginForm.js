@@ -3,6 +3,10 @@ import { useRouter } from 'next/router'
 import React from 'react'
 import { Form } from 'semantic-ui-react'
 import { initialValues, validationSchema } from './LoginForm.Form'
+import { Auth } from '@/api/auth'
+
+
+const AuthCtrl = new Auth()
 
 
 
@@ -14,12 +18,13 @@ const LoginForm = () => {
     initialValues: initialValues(),
     validationSchema: validationSchema(),
     onSubmit: async (formData) => {
-      console.log(formData)
-      // const response = await authApi.login(formData)
-      // console.log(response)
-      // if (response?.jwt) {
-      //   router.push('/')
-      // }
+      try {
+        const response = await AuthCtrl.login(formData)
+        console.log(response)
+        router.push('/')
+      } catch (error) {
+        console.log(error);
+      }
     }
   })
 
