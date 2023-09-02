@@ -4,14 +4,15 @@ import React from 'react'
 import { Form } from 'semantic-ui-react'
 import { initialValues, validationSchema } from './LoginForm.Form'
 import { Auth } from '@/api/auth'
+import { useAuth } from '@/hooks/userAuth'
 
 
 const AuthCtrl = new Auth()
 
-
-
 const LoginForm = () => {
 
+  const {accessToken} = useAuth()
+  
   const router = useRouter()
 
   const formik = useFormik({
