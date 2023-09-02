@@ -11,7 +11,7 @@ const AuthCtrl = new Auth()
 
 const LoginForm = () => {
 
-  const {accessToken} = useAuth()
+  const {login} = useAuth()
   
   const router = useRouter()
 
@@ -21,8 +21,8 @@ const LoginForm = () => {
     onSubmit: async (formData) => {
       try {
         const response = await AuthCtrl.login(formData)
-        console.log(response)
-        router.push('/')
+        login(response.jwt)
+        // router.push('/')
       } catch (error) {
         console.log(error);
       }

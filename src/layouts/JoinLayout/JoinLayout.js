@@ -2,8 +2,17 @@ import React from 'react'
 import Link from 'next/link'
 import { Icon, Image } from 'semantic-ui-react'
 import styles from './JoinLayout.module.scss'
+import { useAuth } from '@/hooks/userAuth'
+import { useRouter } from 'next/router'
+
+
 
 const JoinLayout = ({children}) => {
+    const {user} = useAuth()
+    const router = useRouter()
+
+    if(user) router.push('/')
+
   return (
     <div className={styles.container}>
         <div className={styles.topBar}>
