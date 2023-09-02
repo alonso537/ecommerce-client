@@ -22,7 +22,7 @@ const LoginForm = () => {
       try {
         const response = await AuthCtrl.login(formData)
         login(response.jwt)
-        // router.push('/')
+        router.push('/')
       } catch (error) {
         console.log(error);
       }

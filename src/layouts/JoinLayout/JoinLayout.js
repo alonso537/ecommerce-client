@@ -11,6 +11,8 @@ const JoinLayout = ({children}) => {
     const {user} = useAuth()
     const router = useRouter()
 
+    console.log(user);
+
     if(user) router.push('/')
 
   return (
