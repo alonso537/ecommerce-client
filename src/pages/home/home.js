@@ -3,8 +3,10 @@ import React from 'react'
 
 const home = () => {
   return (
-    <BasicLayout isContainer >
-        <h1>Estamos en el home</h1>
+    <BasicLayout>
+        <h1 style={{
+            paddingTop: 100
+        }}>Estamos en el home</h1>
     </BasicLayout>
   )
 }
