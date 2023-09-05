@@ -2,6 +2,7 @@ import React from 'react'
 import styles from './TopBar.module.scss'
 import Link from 'next/link'
 import {Image} from 'semantic-ui-react'
+import Account from '../account/Account'
 
 const TopBar = ({isOpenSearch}) => {
   return (
@@ -17,7 +18,7 @@ const TopBar = ({isOpenSearch}) => {
         </div>
 
         <div className={styles.right}>
-            <span>ACCOUNT</span>
+            <Account />
         </div>
     </div>
   )
