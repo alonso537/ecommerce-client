@@ -3,7 +3,9 @@ const { ENV } = require("@/utils/constanst");
 export class Platform {
     async getAll() {
         try {
-            const url = `${ENV.API_URL}${ENV.ENDPOINTS.PLATFORM}?populate=icon`
+            const sort = 'sort=order:asc'
+            const populate = 'populate=icon'
+            const url = `${ENV.API_URL}${ENV.ENDPOINTS.PLATFORM}?${populate}&${sort}`
             const response = await fetch(url);
             // console.log(response);
             const result = await response.json()

@@ -1,0 +1,24 @@
+@import '~/src/scss/index.scss';
+
+.platforms {
+    position: relative;
+    background-color: $background-quarternary__blur;
+    backdrop-filter: blur(20px);
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    border-radius: 100px 0 0 100px;
+
+    > a {
+        display: flex;
+        align-items: center;
+        padding: 20px 15px;
+        text-decoration: none;
+
+        img {
+            filter: brightness(0) invert(1);
+            height: 16px;
+            padding-right: 10px;
+        }
+    }
+}
