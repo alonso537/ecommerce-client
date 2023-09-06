@@ -29,3 +29,13 @@ a {
         color: $primary;
     }
 }
+
+li {
+  list-style: none;
+  color: $text-primary;
+
+    &:hover {
+        color: $primary;
+        cursor: pointer;
+    }
+}
