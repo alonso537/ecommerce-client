@@ -6,6 +6,7 @@ import styles from './Account.module.scss';
 import { useAuth } from '@/hooks/userAuth';
 import { useRouter } from 'next/router';
 import ChangeNameForm from '@/components/Account/Settings/ChangeNameForm/ChangeNameForm';
+import Separator from '@/components/Shared/Separator/Separator';
 
 const Account = () => {
 
@@ -56,7 +57,7 @@ const Account = () => {
       render: () => (
         <Tab.Pane attached={false}>
           <ChangeNameForm />
-
+          <Separator height={80} />
         </Tab.Pane>
       )
     },
@@ -69,7 +70,7 @@ const Account = () => {
     }
   ]
 
-
+  
   return (
     <BasicLayout isContainer relative>
       <Info />
