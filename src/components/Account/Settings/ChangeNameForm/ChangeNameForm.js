@@ -3,8 +3,13 @@ import styles from "./ChangeNameForm.module.scss";
 import { useFormik } from "formik";
 import { initialValues, validationSchema } from "./ChangeNameForm.Form";
 import { useAuth } from "@/hooks/userAuth";
+import { User } from "@/api/user";
+
+const userCntl = new User()
 
 const ChangeNameForm = () => {
+
+
 
   const {user} = useAuth()
 
@@ -15,7 +20,8 @@ console.log(user);
     validateOnChange: false,
     onSubmit: async (formValue) => {
       try {
-        console.log(formValue);
+        // console.log(formValue);
+        await userCntl.updateMe(user?.id, formValue)
       } catch (error) {
         console.log(error);
       }
