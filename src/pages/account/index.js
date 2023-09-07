@@ -7,6 +7,7 @@ import { useAuth } from '@/hooks/userAuth';
 import { useRouter } from 'next/router';
 import ChangeNameForm from '@/components/Account/Settings/ChangeNameForm/ChangeNameForm';
 import Separator from '@/components/Shared/Separator/Separator';
+import ChangeEmailForm from '@/components/Account/Settings/ChangeEmailForm/ChangeEmailForm';
 
 const Account = () => {
 
@@ -57,6 +58,11 @@ const Account = () => {
       render: () => (
         <Tab.Pane attached={false}>
           <ChangeNameForm />
+          <div className={styles.containerForm}>
+
+          <ChangeEmailForm />
+          <ChangeEmailForm />
+          </div>
           <Separator height={80} />
         </Tab.Pane>
       )
