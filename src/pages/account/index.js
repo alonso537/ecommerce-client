@@ -5,6 +5,7 @@ import { Tab } from 'semantic-ui-react'
 import styles from './Account.module.scss';
 import { useAuth } from '@/hooks/userAuth';
 import { useRouter } from 'next/router';
+import ChangeNameForm from '@/components/Account/Settings/ChangeNameForm/ChangeNameForm';
 
 const Account = () => {
 
@@ -54,7 +55,7 @@ const Account = () => {
       menuItem: {icon: 'settings', content: 'Ajustes'},
       render: () => (
         <Tab.Pane attached={false}>
-          <p>Ajustes</p>
+          <ChangeNameForm />
 
         </Tab.Pane>
       )
