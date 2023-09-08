@@ -9,7 +9,7 @@ import ChangeNameForm from '@/components/Account/Settings/ChangeNameForm/ChangeN
 import Separator from '@/components/Shared/Separator/Separator';
 import ChangeEmailForm from '@/components/Account/Settings/ChangeEmailForm/ChangeEmailForm';
 import ChangePasswordForm from '@/components/Account/Settings/ChangePasswordForm/ChangePasswordForm';
-import AddAddress from '@/components/Account/Address/AddAddress';
+import AddAddress from '@/components/Account/Address/AddAdress/AddAddress';
 
 const Account = () => {
 
