@@ -9,6 +9,7 @@ import ChangeNameForm from '@/components/Account/Settings/ChangeNameForm/ChangeN
 import Separator from '@/components/Shared/Separator/Separator';
 import ChangeEmailForm from '@/components/Account/Settings/ChangeEmailForm/ChangeEmailForm';
 import ChangePasswordForm from '@/components/Account/Settings/ChangePasswordForm/ChangePasswordForm';
+import AddAddress from '@/components/Account/Address/AddAddress';
 
 const Account = () => {
 
@@ -49,8 +50,9 @@ const Account = () => {
       menuItem: 'Direcciones',
       render: () => (
         <Tab.Pane attached={false}>
-          <p>direcciones...</p>
+          <AddAddress />
 
+          <Separator height={80} />
         </Tab.Pane>
       )
     },
