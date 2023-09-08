@@ -3,15 +3,27 @@ import Styles from "./ChangeEmailForm.module.scss";
 import { useFormik } from "formik";
 import { useRouter } from "next/router";
 import { initialValues, validationSchema } from "./ChangeEmailForm.form";
+import { User } from "@/api/user";
+import { useAuth } from "@/hooks/userAuth";
+
+const userCtrl = new User()
 
 const ChangeEmailForm = () => {
+  const {user, updateUser} = useAuth()
+
+
   const formik = useFormik({
     initialValues: initialValues(),
     validationSchema: validationSchema(),
     validateOnChange: false,
     onSubmit: async (formValue) => {
       try {
-        console.log(formValue);
+        // console.log(formValue);
+        await userCtrl.updateMe(user.id, {
+          email: formValue.email
+        })
+        updateUser("email", formValue.email)
+        formik.handleReset()
       } catch (error) {
         console.log(error);
       }
