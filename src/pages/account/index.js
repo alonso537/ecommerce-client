@@ -61,7 +61,7 @@ const Account = () => {
           <div className={styles.containerForm}>
 
           <ChangeEmailForm />
-          <ChangeEmailForm />
+          {/* <ChangeEmailForm /> */}
           </div>
           <Separator height={80} />
         </Tab.Pane>
