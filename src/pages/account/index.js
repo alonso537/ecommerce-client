@@ -8,6 +8,7 @@ import { useRouter } from 'next/router';
 import ChangeNameForm from '@/components/Account/Settings/ChangeNameForm/ChangeNameForm';
 import Separator from '@/components/Shared/Separator/Separator';
 import ChangeEmailForm from '@/components/Account/Settings/ChangeEmailForm/ChangeEmailForm';
+import ChangePasswordForm from '@/components/Account/Settings/ChangePasswordForm/ChangePasswordForm';
 
 const Account = () => {
 
@@ -62,6 +63,7 @@ const Account = () => {
 
           <ChangeEmailForm />
           {/* <ChangeEmailForm /> */}
+          <ChangePasswordForm />
           </div>
           <Separator height={80} />
         </Tab.Pane>
