@@ -13,7 +13,7 @@ const ChangeNameForm = () => {
 
   const {user} = useAuth()
 
-console.log(user);
+// console.log(user);
   const formik = useFormik({
     initialValues: initialValues(user?.firstname, user?.lastname),
     validationSchema: validationSchema(),

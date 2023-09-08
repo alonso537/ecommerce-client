@@ -55,7 +55,7 @@ const Account = () => {
       )
     },
     {
-      menuItem: {icon: 'settings', content: 'Ajustes'},
+      menuItem: {ket: 20,  icon: 'settings', content: 'Ajustes'},
       render: () => (
         <Tab.Pane attached={false}>
           <ChangeNameForm />
@@ -71,7 +71,8 @@ const Account = () => {
     },
     {
       menuItem: {
-        icon: 'logout',
+        key: 21,
+        icon: 'log out',
         content: '',
         onClick: onLogout
       }
